@@ -15,16 +15,12 @@ public class CipherDemo {
 		key = sc.nextInt();
 		CipherBody obj = new CipherBody();
 		obj.docipher(key , message);
-		sc.close();
-		
+		sc.close();	
 	}
-
 }
 
 class CipherBody{
-	
 	int temp;
-	
 	public void docipher(int key , String message) {
 		
 		char[] array = message.toCharArray(); 
@@ -35,17 +31,9 @@ class CipherBody{
          temp= value + key;
          array[i] = (char) temp;
         }
-        
 		}
-		
 		for(int i = 0;i<array.length;i++) {
 			System.out.print(array[i]);
 		}
-	
-
 	}
-	
-	
-	
-	
 }
